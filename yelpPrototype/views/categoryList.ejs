@@ -1,0 +1,29 @@
+<div class="add-biz-link">
+<input type="button" value="Add category" onclick="getAddCategoryiew()" class="ybtn ybtn-primary">
+</div>
+
+<div>
+<p class="List-title">
+Categories
+</p>
+<% for(var count=0;count < category.length; count++)  { 
+	   var curObj=category[count];
+	
+	%>
+	<div class="bdiv">
+		<div>
+		<span class="busi-name"><%=curObj.name%></span>
+		<span class="hidden"><%=curObj.id%></span>
+		<div class="category-edit-div">
+			<input type="button" value="Edit" onclick="getEditCategoryView(<%=curObj.id%>)" class="ybtn ybtn-primary">
+			<input type="button" value="Delete" onclick="deleteCategory(<%=curObj.id%>)" class="ybtn ybtn-primary">
+		</div>
+		
+		</div>
+				
+	</div>
+	
+	
+	<%}%>
+
+</div>

@@ -1,0 +1,47 @@
+<div class="add-business-wrapper">
+	<form action="/addbusiness" class="yform" id="business-add-form" method="POST">
+					<div>
+			        	<p class="title-p">
+			        	Select a category       	
+			        	</p></br>
+			        	<select id="categories" name="cid">
+							    <option value="">--select a category--</option>
+							    <% for(var count=0;count < categories.length; count++)  { 
+							    	var curObj=categories[count];
+							     %>
+							      <option value="<%= curObj.id %>"><%= curObj.name %></option>
+							    <% } %>
+						</select>
+			        	
+		        	</div>
+		        	<div>
+			        	<p class="title-p">
+			        	Business name        	
+			        	</p></br>
+			        	<input type="text" name="business-name" placeholder="Ex: Crossroads cafe">
+			        	
+		        	</div>
+		        	<div>
+			        	<p class="title-p">
+			        	Address       	
+			        	</p></br>
+			        	<input type="text" name="business-address" placeholder="Ex: 33 South third, San jose 95113">
+			        	
+		        	</div>
+		        	<div>
+			        	<p class="title-p">
+			        	Neighbourhood       	
+			        	</p></br>
+			        	<input type="text" name="business-neighbourhood" placeholder="Ex: Downtown">
+			        	
+		        	</div>
+		        		
+
+					
+					<div class="submit-div">
+			        	   		<input type="submit" value="Post" class="ybtn ybtn-primary" >
+		        	   
+			         </div>
+		        </form>
+		        
+</div>	        

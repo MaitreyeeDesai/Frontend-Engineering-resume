@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="header">
+    </div>
+    
+    <div class="middleSection">
+    <div class="superContainer">
+    <div class="childContainer">
+    <diV class="loginWrapperDiv">
+    
+    <form id="login-form" action="/signin" method="post">
+    <h2>Log In</h2>
+    <p>
+    Please enter your email address and password to log in.
+    </p>
+    <p>
+    <label>Email address</label>
+    <input tabindex="1" type="email" maxlength="64" size="20" class="form200" name="email" value="">
+    </p>
+     <p>
+    <label>Password</label>
+    <input tabindex="2" autocomplete="off" type="password" size="20" class="form200" name="password">
+    </p>
+    <p class="formLabel">
+    <a href="/forgot">Forgot your password?</a>
+        </p>
+        
+        <p style="margin: 10px 5px 20px;text-align: right;">
+                    <button name="action_submit" tabindex="3" type="submit" value="Log In" class="ybtn"><span>Log In</span></button>
+                </p>
+                
+                <p>
+
+                    By logging in you agree to Yelps <a href="/static?p=tos&amp;country=US">Terms of Service</a> and <a href="/tos/privacy_en_us_20130910">Privacy Policy</a>.
+                </p>
+    </form>
+    </div>
+    
+     <diV class="signUpWrapperDiv">
+     <div id="login-to-signup">
+                <h2>No Account Yet?</h2>
+                <p>That's okay, we still love you.</p>
+                <a href="/signup" id="sign-up" class="ybtn ybtn-primary">Sign Up</a>
+                <p>Yelp is the fun and easy way to find, review and talk about what's great - and not so great - in your local area. It's about real people giving their honest and personal opinions on everything from restaurants and spas to coffee shops and bars.</p>
+            </div>
+    </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <div class="footer">
+    </div>
+    
+  </body>
+</html>

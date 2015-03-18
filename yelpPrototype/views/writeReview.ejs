@@ -1,0 +1,73 @@
+<div>
+	    <div class="container landing">
+		<div class="clearfix layout-block layout-full">
+			<div class="column column-alpha" id="main">
+                <ol>
+                    <li class="war-step1"><span>Enter business</span></li>
+                    <li class="war-step2"><span>Enter location</span></li>
+                    <li class="war-step3"><span>Write your review!</span></li>
+                </ol>
+                <h2>Which Business Would You Like to Review?</h2>
+                   
+            <div class="business-search-form-inner">
+     <div class="field-container">
+	        <div class="business-search">
+	        	<ul class="inline-layout clearfix">
+	                <li>
+	                    <div class="text-boxes">
+	     					<input class="review-page-search-boxes" id="business_desc" maxlength="64" name="find_desc" placeholder="Ex: Crossroads cafe" value="" tabindex="1">
+	     					
+	    			    </div>
+	    		    </li>
+	    		    <li>
+	    		        <div class="review-writing-next-page">
+	     					<input type="button" value="Write a review" onclick="getWriteReviewView()" class="ybtn ybtn-primary">
+	    			    </div>	
+	    		    </li>
+	             
+	            </ul>
+	   
+	        </div>
+	       
+	        	<div id="review_writing_div">
+	        	 <fieldset class="review-fieldset">
+	        	<legend>Post your experience with this business</legend>   
+		        <form action="/submitReview" id="review-form" method="POST">
+		        	<div class="wraper">
+		        	<div class="inner-first">
+			        	<span id="bname"> </span></br>
+			        	   <p class="title-p">Location: </p><span id="address"> </span></br>
+			        	   <p class="title-p">Neighbourhood: </p><span id="nhood"> </span>
+		        	</div>
+		        	   <div class="inner-second">
+		        	   <p class="title-p">Review</p><input type="text" id="review_textBlock" name="review" class="review-text-box">
+		        	   <span class="title-p">Rating</span><input type="text" id="rating_textBlock" name="rating" class="rating-text">
+			        	   <div class="submit-div">
+			        	   		<input type="submit" value="Post review" class="ybtn ybtn-primary" >
+		        	   <input type="hidden" id="business_id" name="bid" >
+			        	   </div>
+		        	   
+		        	   </div>
+		        	   
+		        	  </div>
+		        </form>
+		         </fieldset>	        	         
+	        </div>
+	       
+	        
+	        <div class="add-businessdiv">
+	             		<span>Could not find the bussiness you are looking for?</span>
+	    				<div class="add-bussiness-link">
+							<input type="button" value="Add business" onclick="getAddBusinessView()" class="ybtn ybtn-primary">
+						</div>
+	        </div>         
+     </div>
+        
+    </div>
+             
+
+</div>
+</div>
+</div>
+    
+</div>

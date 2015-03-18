@@ -1,0 +1,67 @@
+    	<div class="user-header">
+	<div class="user-details"><span>Welcome</span><span id="user-name"><%=fname%></span></div>
+	<div class="last-login">Last login: <span><%=lastlogin%></span></div>
+	</div>
+	
+	<div class="data">
+	<div class="left-div">
+	<div class="recent-act-header">
+	<h2>Recent activity</h2>
+	</div>
+	<div class="recent-reviews">
+	<% for(var count=0;count < reviews.length; count++)  { 
+	   var curObj=reviews[count];
+	
+	%>
+	
+	<div class="inline-reviews">
+		<div class="userImage-review">
+		</div>
+		<div class="reviewDetails">
+			<span><%=fname%> wrote a review</span>
+			<div>
+				<p class="review-placeName"><%=curObj.bname%></p>
+				<span><%= curObj.address%></span></br>
+				<span>Neighbourhood: <%= curObj.neiborhood%></span></br>
+				<span>Rating:<%= curObj.rating%></span></br>
+				<span>Review:</span></br>
+				<span><%=curObj.review%></span>
+	
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<% }; %>
+	
+	
+	</div>
+	</div>
+	<div class="right-div">
+		<div class="personal-details">
+			<div class="upper-div">
+				<div class="userImage">
+				</div>
+				<div class="username-details">
+					<span>Hello,</span></br>
+					<span><%=fname%></span> <span><%=lname%></span></br>
+					<span>Reviews by you:  <span><%=reviews.length%></span></span>
+				</div>
+	
+			</div>
+		</div>
+		
+			
+	</div>
+	</div>
+    </div>
+
+    
+     
+    </div>
+    
+    </div>
+    
+    </div>

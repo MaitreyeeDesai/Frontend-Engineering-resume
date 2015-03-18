@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+      <script src="/Scripts/home.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="homeheader">
+    <div class="center-head">
+    <div class="logo">
+    
+    </div>
+    <div class="text-boxes">
+     <input autocomplete="off" class="home-page-search-boxes" id="find_desc" maxlength="64" name="find_desc" placeholder="Find: tacos, cheap dinner" value="" aria-autocomplete="list" tabindex="1">
+    <input autocomplete="off" class="home-page-search-boxes" id="dropperText_Mast" maxlength="80" name="find_loc" placeholder="Near: San jose , CA" aria-autocomplete="list" tabindex="2">
+    
+    </div>
+    <div class="button-container">
+            <button id="header-search-submit" tabindex="3" title="Search feature in progress." disabled="disabled" class="ybtn ybtn-primary header-button"><span>   
+</button>
+        </div>
+    <div class="logout-div">
+    <a href="/logout">Logout</a>
+    </div>
+    <div class="nav-div">
+    <ul class="header-nav pull-left" id="header-nav">
+                <li class="inline-block" id="home-link" onclick="getDashboard()">
+                    <p >
+                        Home
+                    </p>
+                </li>
+                <li class="inline-block" id="about-me" onclick="getBussinessListView()">
+                    <p >
+                       Businesses
+                    </p>
+                </li>
+                <li class="inline-block" id="writeReview_link" onclick="writeReview()">
+                    <p >
+                        Write a Review
+                    </a>
+                </li>
+                <li class="inline-block" id="messaging" onclick="getCategoryListView()">
+                    <p>
+                        Categories
+                    </p>
+                </li>
+                <li class="inline-block" id="find-friends">
+                    <p  title="feature under development" class="disabled">
+                        Find Friends
+                    </p>
+                </li>
+                
+                <li class="inline-block" id="talk">
+                    <p  title="feature under development" class="disabled">
+                        Talk
+                    </p>
+                </li>
+                <li class="inline-block" id="events">
+                    <p title="feature under development" class="disabled">
+                        Events
+                    </p>
+                </li>
+        </ul>
+    </div>
+    </div>
+    </div>
+    
+    <div class="middleSection">
+    <div class="superContainer">
+    <div class="childContainer">
+    <div class="home-page-body">
+    	<div class="user-header">
+	<div class="user-details"><span>Welcome</span><span id="user-name"><%=fname%></span></div>
+	<div class="last-login">Last login: <span><%=lastlogin%></span></div>
+	</div>
+	
+	<div class="data">
+	<div class="left-div">
+	<div class="recent-act-header">
+	<h2>Recent activity</h2>
+	</div>
+	<div class="recent-reviews">
+	<% for(var count=0;count < reviews.length; count++)  { 
+	   var curObj=reviews[count];
+	
+	%>
+	
+	<div class="inline-reviews">
+		<div class="userImage-review">
+		</div>
+		<div class="reviewDetails">
+			<span><%=fname%> wrote a review</span>
+			<div>
+				<p class="review-placeName"><%=curObj.bname%></p>
+				<span><%= curObj.address%></span></br>
+				<span>Neighbourhood: <%= curObj.neiborhood%></span></br>
+				<span>Rating:<%= curObj.rating%></span></br>
+				<span>Review:</span></br>
+				<span><%=curObj.review%></span>
+	
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<% }; %>
+	
+	
+	</div>
+	</div>
+	<div class="right-div">
+		<div class="personal-details">
+			<div class="upper-div">
+				<div class="userImage">
+				</div>
+				<div class="username-details">
+					<span>Hello,</span></br>
+					<span><%=fname%></span> <span><%=lname%></span></br>
+					<span>Reviews by you:  <span><%=reviews.length%></span></span>
+				</div>
+	
+			</div>
+		</div>
+		
+			
+	</div>
+	</div>
+    </div>
+
+    
+     
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <div class="footer">
+    </div>
+    <div class="alert-box error" id="errorMessage"><span id="error-span"></span></div>
+	<div class="alert-box success" id="successMessage"><span id="success-span"></span></div>
+	
+  </body>
+</html>

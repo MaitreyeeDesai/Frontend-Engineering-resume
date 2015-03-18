@@ -1,0 +1,30 @@
+<div class="add-biz-link">
+<input type="button" value="Add business" onclick="getAddBusinessView()" class="ybtn ybtn-primary">
+</div>
+
+<div>
+<p class="List-title">
+Bussiness list
+</p>
+<% for(var count=0;count < businessArray.length; count++)  { 
+	   var curObj=businessArray[count];
+	
+	%>
+	<div class="bdiv">
+		<div>
+		<span class="busi-name"><%=curObj.bname%></span></br>
+		<p class="title-p">Location:</p><span class="busi-name"><%=curObj.address%></span></br>
+		<p class="title-p">Neighbourhood:</p><span class="busi-name"><%=curObj.neiborhood%></span>
+		</div>
+		<div class="review-writing-next-page">
+		 					
+	     					<input type="button" value="Write a review" onclick="getWriteReviewViewForBusiness(<%=curObj.bid%>)" class="ybtn ybtn-primary">
+	    			    </div>	
+	
+		
+	</div>
+	
+	
+	<%}%>
+
+</div>

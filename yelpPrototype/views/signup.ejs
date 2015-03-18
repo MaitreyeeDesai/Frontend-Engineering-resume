@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %>Sign Up | Yelp</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="header">
+    </div>
+    
+    <div class="middleSection">
+    <div class="superContainer ">
+    <div class="signup-form-container">
+    <div class=wrapperSignUp>
+     <h2>Sign up for Yelp </h2>
+    <p class="subheading">Connect with great local businesses</p>
+    <div class="fb-start">
+            <div class="fb-button">
+                <span class="logo" id="fb_logo"></span>
+                <div class="text">Sign up with Facebook</div>
+            </div>
+            <p class="legal-copy">Don't worry, we never post without your permission.</p>
+        </div>
+        <fieldset class="hr-line">
+                        <legend align="center">OR</legend>
+                    </fieldset>
+                    <form action="/register" class="yform signup-form  city-hidden" id="signup-form" method="POST">
+              
+                      <ul class="inline-layout clearfix">
+                    <li>
+        <label class="placeholder-sub">First Name</label>
+        <input id="first_name" name="first_name" placeholder="First Name" required="required" type="text" value="">
+    </li>
+
+                    <li>
+        <label class="placeholder-sub">Last Name</label>
+        <input id="last_name" name="last_name" placeholder="Last Name" required="required" type="text" value="">
+    </li>
+
+        </ul>
+        <label class="placeholder-sub">Email</label>
+        <input id="email" name="email" placeholder="Email" required="required" type="email" value="">
+        <label class="placeholder-sub">Password</label>
+        <input id="password" name="password" placeholder="Password" required="required" type="password" value="">
+
+          
+
+        <div class="captcha" id="signup-captcha"></div>
+        <p class="legal-copy legal-left">
+          
+        </p>
+        <button id="signup-button" type="submit" value="Sign Up" class="ybtn ybtn-primary ytype disable-on-submit submit signup-button ybtn-disabled" ><span>Sign Up</span></button>
+
+        </form>
+   		<p>
+   		<a href="/">Back to login...</a>
+   		</p>
+    </div>
+    
+    <div class="signup_img">
+    </div>
+    </div>
+    
+    
+    </div>
+    
+    </div>
+    
+   
+    
+    <div class="footer">
+    </div>
+    
+  </body>
+</html>

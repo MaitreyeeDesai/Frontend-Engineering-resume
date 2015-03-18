@@ -1,0 +1,21 @@
+<form action="/submitReview" id="review-form" method="POST">
+		        	<div class="wraper">
+		        	<div class="inner-first">
+			        	<span id="bname" class="title-p"> <%=bname%></span>
+			        	   <p class="title-p">Location: </p>
+			        	   <p><%=address%></p>
+			        	   <p class="title-p">Neighbourhood: </p>
+			        	   <p><%=neiborhood%></p>
+		        	</div>
+		        	   <div class="inner-second">
+		        	   <p class="title-p">Review</p><input type="text" id="review_textBlock" name="review" class="review-text-box">
+		        	   <span class="title-p">Rating</span><input type="text" id="rating_textBlock" name="rating" class="rating-text">
+			        	   <div class="submit-div">
+			        	   		<input type="submit" value="Post review" class="ybtn ybtn-primary" >
+		        	   <input type="hidden" id="business_id" name="bid" value="<%=bid%>" >
+			        	   </div>
+		        	   
+		        	   </div>
+		        	   
+		        	  </div>
+		        </form>	      
